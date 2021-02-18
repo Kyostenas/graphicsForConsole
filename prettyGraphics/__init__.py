@@ -1,1 +1,1 @@
-from table import table
+from prettyGraphics.table import table
