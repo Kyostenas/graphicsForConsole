@@ -1,14 +1,14 @@
 from distutils.core import setup
 setup(
-  name = 'graphicsForConsole',         
-  packages = ['graphicsForConsole'],   
+  name = 'prettyGraphics',         
+  packages = ['prettyGraphics'],   
   version = '0.1',      
   license='MIT',        
   description = 'All sorts of tables and graphics for console (for now just tables) ',   
   author = 'Benjamin Ramirez',                   
   author_email = 'chilerito12@gmail.com',      
-  url = 'https://github.com/Kyostenas/pretty-graphics-console',   
-  download_url = 'https://github.com/Kyostenas/pretty-graphics-console/archive/v0.1-beta.1.tar.gz',    
+  url = 'hhttps://github.com/Kyostenas/prettyGraphics',   
+  download_url = 'https://github.com/Kyostenas/prettyGraphics/archive/v0.1-beta.1.tar.gz',    
   keywords = ['console', 'graphics'],   
   install_requires=[            
       ],
