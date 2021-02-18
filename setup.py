@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
-  name = 'pretty-graphics-console',         
-  packages = ['pretty-graphics-console'],   
+  name = 'graphicsForConsole',         
+  packages = ['graphicsForConsole'],   
   version = '0.1',      
   license='MIT',        
   description = 'All sorts of tables and graphics for console (for now just tables) ',   
@@ -9,7 +9,7 @@ setup(
   author_email = 'chilerito12@gmail.com',      
   url = 'https://github.com/Kyostenas/pretty-graphics-console',   
   download_url = 'https://github.com/Kyostenas/pretty-graphics-console/archive/v0.1-beta.1.tar.gz',    
-  keywords = ['SOME', 'MEANINGFULL', 'KEYWORDS'],   
+  keywords = ['console', 'graphics'],   
   install_requires=[            
       ],
   classifiers=[
