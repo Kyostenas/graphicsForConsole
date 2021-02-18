@@ -8,7 +8,7 @@ setup(
   author = 'Benjamin Ramirez',                   
   author_email = 'chilerito12@gmail.com',      
   url = 'https://github.com/Kyostenas/pretty-graphics-console',   
-  download_url = 'https://github.com/user/reponame/archive/v_01.tar.gz',    
+  download_url = 'https://github.com/Kyostenas/pretty-graphics-console/archive/v0.1-beta.1.tar.gz',    
   keywords = ['SOME', 'MEANINGFULL', 'KEYWORDS'],   
   install_requires=[            
       ],
