@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'prettyGraphics',         
   packages = ['prettyGraphics'],   
-  version = '0.1',      
+  version = '0.2',      
   license='MIT',        
   description = 'All sorts of tables and graphics for console (for now just tables) ',   
   author = 'Benjamin Ramirez',                   

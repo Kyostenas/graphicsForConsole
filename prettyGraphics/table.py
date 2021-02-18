@@ -97,8 +97,10 @@ class table:
     def anchoVentana(self):
         if os.name == "nt":
             mode = os.popen('mode').read().split()
-            lineasInd = mode.index("Lineas:")+1
-            colInd = mode.index("Columnas:")+1
+            lineas = "L!neas:" if "L!neas:" in mode else "Lines"
+            cols = "Columnas" if "Columnas" in mode else "Columns"
+            lineasInd = mode.index(lineas)+1
+            colInd = mode.index(cols)+1
             lineas = mode[lineasInd]
             columnas = mode[colInd]
         else:
