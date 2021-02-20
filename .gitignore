@@ -143,3 +143,6 @@ static
 
 # data files
 *.dat
+
+#other
+/.vscode

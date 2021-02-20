@@ -2,15 +2,16 @@ from distutils.core import setup
 setup(
   name = 'prettyGraphics',         
   packages = ['prettyGraphics'],   
-  version = '0.3',      
+  version = '0.4',      
   license='MIT',        
   description = 'All sorts of tables and graphics for console (for now just tables) ',   
   author = 'Benjamin Ramirez',                   
   author_email = 'chilerito12@gmail.com',      
   url = 'https://github.com/Kyostenas/prettyGraphics',   
-  download_url = 'https://github.com/Kyostenas/prettyGraphics/archive/v0.3-beta.1.tar.gz',    
+  download_url = 'https://github.com/Kyostenas/prettyGraphics/archive/v0.4-beta.1.tar.gz',    
   keywords = ['console', 'graphics'],   
-  install_requires=[            
+  install_requires=[ 
+      'nltk'         
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      

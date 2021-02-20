@@ -97,8 +97,8 @@ class table:
     def anchoVentana(self):
         if os.name == "nt":
             mode = os.popen('mode').read().split()
-            lineas = "L!neas:" if "L!neas:" in mode else "Lines"
-            cols = "Columnas" if "Columnas" in mode else "Columns"
+            lineas = "L¡neas:" if "L¡neas:" in mode else ("Líneas" if "Líneas" in mode else "Lines")
+            cols = "Columnas:" if "Columnas:" in mode else "Columns:"
             lineasInd = mode.index(lineas)+1
             colInd = mode.index(cols)+1
             lineas = mode[lineasInd]
@@ -377,11 +377,58 @@ class table:
 
         tabla += f'{separadorInferior}\n'
 
-        return tabla
+        return tabla[:-1]
     
     
    
 if __name__ == '__main__':
-    datos = [["a","b"],[1123, 12223212]]
-    table = table(datos, 5, centVent=1)
-    print(table.table)
+
+
+
+    import nltk
+    from random import choice, randint
+
+    style = int(input("Style (0 - 5): "))
+    alignment = int(input("Alignment (0: left, 1: center): "))
+    centerTable = int(input("Adjust table to window (0: no, 1: yes): "))
+
+    try:
+        nltk.corpus.words.words()
+    except:
+        nltk.download("words")
+
+    inicio = randint(2000, 200000)
+    final = 10
+    wordList = nltk.corpus.words.words()[inicio:inicio+final] + ["a", "x", "y", "b", "c", "v", "q", "w", "e", "o", "t", "g"]
+    numeros = "1 3 2 4 5 6 7 8 9 0"
+    letras = "a b c d e f g h i j k l m n ñ o p q r s t u v w x y z"
+
+    encabezado = ["STRING","LEN","TYPE","ID"]
+    datos = [encabezado]
+    for x in range(0, len(wordList)):
+        datos.append(['' for nuevo in encabezado])
+        for y in range(0, len(encabezado)):
+            if y == 0:
+                datos[x+1][y] = wordList[x]
+            elif y == 1:
+                datos[x+1][y] = str(len(wordList[x]))
+            elif y == 2:
+                datos[x+1][y] = (choice(["Word", "String"])) if len(wordList[x]) > 1 else choice(["Letter", "Character"])
+            else:
+                tamaño = randint(30, 40)
+                idEscogido = ""            
+
+                for caracter in range(0, tamaño):
+                    eleccion = randint(0, 1)
+                    mayuscula = randint(0, 1)
+                    aElegir = (numeros if eleccion==0 else letras).split()
+                    caracter = choice(aElegir)
+                    caracter.upper() if (caracter in letras and mayuscula == 1) else True
+                    idEscogido += caracter
+
+                datos[x+1][y] = idEscogido
+
+    tabla = table(datos, style, alignment, centerTable).table
+    print(tabla)
+
+    input("Press enter to exit")
